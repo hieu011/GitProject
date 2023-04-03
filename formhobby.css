@@ -1,0 +1,12 @@
+.a {
+    color: orange;
+}
+.h {
+    color: blue;
+}
+.h1 {
+    color: white; background-color: orangered; text-align: center;
+}
+.table {
+    border-width: 20px; border-color: aqua; border-style: groove;
+}
