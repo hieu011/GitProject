@@ -1,0 +1,23 @@
+.table1 {
+    width: 100%; border-collapse: collapse;
+}
+.table2 {
+    width: 100%; border-collapse: collapse;  
+}
+.a {
+    padding: 20px;border: 1px solid;border-color: black;background-color: yellow;
+    text-align: center;
+}
+.b {
+    padding: 20px;border: 1px solid;border-color: black;background-color:orange;
+    text-align: center;
+}
+.c {
+    padding: 20px;border: 1px solid;border-color: black; text-align: left;
+}
+.d {
+    text-indent: 20px; color: blue;text-align: left;
+}
+.e {
+    padding-right: 20px; color: blue;text-align: right;
+}
