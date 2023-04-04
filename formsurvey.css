@@ -1,4 +1,4 @@
-.table {
+.table2 {
     width: 50%;
     border-collapse: collapse;
 }
@@ -11,8 +11,8 @@
     padding: 20px;
     border: 1px solid black;
 }
-tr:nth-child(odd) {
-    background-color: #dddddd;
+table.table2 tr:nth-child(odd) {
+    background-color: #8f4848;
 }
 .c {
     font-weight: bold;
