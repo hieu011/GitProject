@@ -1,0 +1,10 @@
+var a = prompt ('vatly');
+var b = prompt ('hoahoc');
+var c = prompt ('sinhhoc');
+a = parseInt (a);
+b = parseInt (b);
+c = parseInt (c);
+var d = (a+b+c)/3;
+var e = a+b+c;
+document.write('dtbinh:'+d);
+document.write('dtong:'+e);
