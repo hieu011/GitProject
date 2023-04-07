@@ -2,12 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    
+    <form action="">
         <table>
             <tr>
                 <td>Amount</td>
@@ -27,27 +25,27 @@
                     <OPtion value="USD">USD</OPtion>
                     </select>
                 </td>
-                <td><button onclick="convert()">Convert</button></td>
+                <td><button onclick="convert()" type="button">Convert</button></td>
             </tr>           
         </table>
         <p id="Result"></p>
-    
+    </form> 
     <script>
         function convert() {
-            var a = document.getElementById('a').value;
-            var b = document.getElementById('b').value;
-            var c = document.getElementById('c').value;
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            var c = document.getElementById("c").value;
             var d;
-            if (b == 'VND' && C == 'USD') {
+            if (b == 'VND' && c == 'USD') {
                 d="Result:"+(a/23000)+'$';
-            } else if (b == 'USD' && C == 'VND') {
+            } else if (b == 'USD' && c == 'VND') {
                 d="Result:"+(a*23000)+"VND";
             } else if (c == 'USD') {
                 d="Result:"+a+"$";
             } else {
                 d="Result:"+a+"VND";  
             }
-                document.getElementById("Result").innerHTML=d;            
+            document.getElementById("Result").innerHTML=d;            
             }
     </script>
 </body>
