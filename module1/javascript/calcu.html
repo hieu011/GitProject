@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        button {
+            width: 5%;
+        }
+        #output {
+            width: 20%;
+            border: 1px solid;
+            padding: 10px;
+        }
+    </style>	
+</head>
+<body>
+    <div id="output"></div>
+        <br>
+	    <button onclick="clearOutput()">C</button>
+        <button onclick="appendToOutput('(')">(</button>
+        <button onclick="appendToOutput(')')">)</button>
+        <button onclick="appendToOutput('/')">/</button>
+       <br>
+       
+        <button onclick="appendToOutput('1')">1</button>
+        <button onclick="appendToOutput('2')">2</button>
+        <button onclick="appendToOutput('3')">3</button>
+        <button onclick="appendToOutput('+')">+</button>
+       <br>
+       
+        <button onclick="appendToOutput('4')">4</button>
+        <button onclick="appendToOutput('5')">5</button>
+        <button onclick="appendToOutput('6')">6</button>
+        <button onclick="appendToOutput('-')">-</button>
+        <br>
+       
+        <button onclick="appendToOutput('7')">7</button>
+        <button onclick="appendToOutput('8')">8</button>
+        <button onclick="appendToOutput('9')">9</button>
+        <button onclick="appendToOutput('*')">*</button>
+        <br>
+		
+        <button onclick="appendToOutput('0')">0</button>
+        <button onclick="appendToOutput('.')">.</button>
+        <button onclick="evaluateOutput()">=</button>
+        
+	
+   
+	<script>
+        var output = document.getElementById('output');
+
+function appendToOutput(value) {
+	output.innerHTML += value;
+}
+
+function clearOutput() {
+	output.innerHTML = '';
+}
+
+function evaluateOutput() {
+	try {
+		var result = eval(output.innerHTML);
+		output.innerHTML = result;
+	} catch (error) {
+		output.innerHTML = 'Error';
+	}
+}
+
+    </script>
+</body>
+</html>
