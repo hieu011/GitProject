@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Nhập từ</p>
+    <input type="text" id="word">
+    <button id="btnTranslate" onclick="translate()" value="btn">Dịch</button><br>
+    <div id="result"></div>
+    <script>
+    function translate() {
+    let englishWord = ['banana', 'apple'];
+    let vietnameseWord = ['chuối', 'táo'];
+    let input = document.getElementById('word').value;
+    let foundMatch = false;
+    
+    for (let i = 0; i < englishWord.length; i++) {
+        if (englishWord[i] === input) {
+            input = vietnameseWord[i];
+            foundMatch = true;
+            break;
+        }
+    }
+    
+    if (foundMatch) {
+        for (let i = 0; i < vietnameseWord.length; i++) {
+            if (vietnameseWord[i] === input) {
+                foundMatch = true;
+                break;
+            }
+        }
+    }
+    
+    if (foundMatch) {
+        document.getElementById('result').innerHTML = input;
+    } else {
+        document.getElementById('result').innerHTML = 'không tìm thấy';
+    }
+}
+
+    </script>
+</body>
+</html>
+
