@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caro</title>
+    <style>
+        .signxo {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+        .divrow {
+            display: flex;
+        }
+        .odd {
+            background-color: rgb(224, 235, 255);
+            width: 50px;
+            height: 50px;
+        }
+        .even {
+            background-color: rgb(255, 224, 224);
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <label for="signX">X</label>
+    <input type="radio" name="sign" value="X">
+    <label for="signO">O</label>
+    <input type="radio" name="sign" value="O">
+    <div id="caro">
+        
+    </div>
+   <script>
+        let xo = 'X';
+
+        let caro = document.getElementById('caro');
+        caro.innerHTML += drawCaroTable(10);
+
+        let signxo = document.querySelectorAll('.signxo');
+        signxo.forEach(function (item, i) {
+            item.addEventListener('click', function () {
+                item.innerHTML = xo;
+                xo = xo == 'X' ? 'O' : 'X';
+            })
+        })
+        
+        
+        function drawCaroTable(colrow) {
+        let str = '';
+
+        for (let i = 0; i < colrow; i++) {
+            str += `<div class="divrow">`;
+
+            for (let k = 0; k < colrow; k++) {
+            let parity = i % 2 === 0 
+                ? (k % 2 === 0 ? 'even signxo' : 'odd signxo') 
+                : (k % 2 === 0 ? 'odd signxo' : 'even signxo');
+
+            // if (i % 2 === 0) {
+            //     if (k % 2 === 0) {
+            //         parity = 'even';
+            //     }
+            //     else {
+            //         parity = 'odd';
+            //     }
+            // }
+            // else {
+            //     if (k % 2 === 0) {
+            //         parity = 'odd';
+            //     }
+            //     else {
+            //         parity = 'even';
+            //     }
+            // }
+            str += `<div class="${parity}"></div>`;
+            }
+            str += `</div>`;
+        }
+            return str;
+        }
+   </script>
+</body>
+</html>
+
