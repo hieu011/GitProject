@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- tạo hàm tạo mảng - hiển thị mảng mỗi giá trị trên 1 dòng - tìm số lớn nhất trong mảng -->
+    <canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
+    <script>
+        class Rectangle {
+            constructor(width,height){
+                this.width = width;
+                this.height = height;
+            }
+            countTheArea() {
+                var area = this.width * this.height;
+                console.log(`dien tich = ${area}`)
+            }
+            countThePerimeter() {
+                var perimeter = 2*(this.width + this.height);
+                console.log(`chu vi = ${perimeter}`)
+            }
+            drawRectangleByCanvas() {
+                let ctx = document.getElementById("myCanvas").getContext("2d");
+                ctx.fillRect(0,0,this.width,this.height);
+            }
+        }
+        let rectangle = new Rectangle(50,100);
+        rectangle.countTheArea();
+        rectangle.countThePerimeter();
+        rectangle.drawRectangleByCanvas();
+    </script>
+</body>
+</html>
