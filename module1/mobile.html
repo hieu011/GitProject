@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Staff{
+            constructor(fullname,email,mobile,dayWorks,salaryPerDay){
+                this.fullname = fullname;
+                this.email = email;
+                this.mobile = mobile;
+                this.dayWorks = dayWorks;
+                this.salaryPerDay = salaryPerDay;
+            }
+            calculateSalary(){
+                let salary = this.dayWorks*this.salaryPerDay
+                return `Tiền lương : ${salary}`
+            }
+        }
+        let staff1 = new Staff('Hieu','hieu@gmail.com','123',25,300000)
+        let staff2 = new Staff('Nhan','nhan@gmail.com','123',20,400000)
+        let staff3 = new Staff('Nhat','nhat@gmail.com','123',27,350000)
+        document.write(staff1.calculateSalary());
+    </script>
+</body>
+
+</html>
